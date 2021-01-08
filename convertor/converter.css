@@ -1,0 +1,15 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    display: block;
+    margin: 7.5vh auto 7.5vh auto;
+    height: 80vh;
+    padding: 1px;
+    text-align: center;
+    width: 75vw;
+    max-width: 700px;
+    background-color: #eee8d5;
+}
