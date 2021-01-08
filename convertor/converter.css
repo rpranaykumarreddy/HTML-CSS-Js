@@ -6,7 +6,8 @@
 div {
     display: block;
     margin: 7.5vh auto 7.5vh auto;
-    height: 80vh;
+    min-height: 80vh;
+    height:auto;
     padding: 1px;
     text-align: center;
     width: 75vw;
