@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<title>Decimal, Binary, Octal, Hexdecimal converter</title>
+<link rel="icon" href="../icon.png" type="image/icon type">
+<link href="converter.css" rel="stylesheet">
+<style>
+
+</style>
+
+<body>
+    <div id="total">
+        <br>
+        <h1>Decimal, Binary, Octal, Hexdecimal converter</h1><br>
+
+        <!--input type option form-->
+        <label for="inputtype">Input type:</label>
+        <select name="inputtype" id="inputtype">
+                <option value="Decimal">Decimal</option>
+                <option value="Binary">Binary</option>
+                <option value="Octal">Octal</option>
+                <option value="Hexdecimal">Hexdecimal</option>
+            </select><br><br>
+
+        <!--input value form-->
+        <input type="text" id="hi" placeholder="Enter a value">
+        <input type="submit" onclick="f1()" value="Calculate">
+        <br><br>
+        <!--output text division-->
+
+
+        <div id="outp">
+            <!--given division-->
+            <div>
+                <p>Given: &nbsp; <span id="given"></span></p>
+            </div>
+            <br>
+            <!--output value division-->
+            <div>
+                <p>Output: <br> &nbsp; <span id="ret1"></span> <br> &nbsp; <span id="ret2"></span> <br> &nbsp; <span id="ret3"></span><br></p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <p style="text-align:center;"> Scripted by <a href="https://github.com/rpranaykumarreddy" target="_blank">R Pranay Kumar Reddy</a></p>
+
+
+    </div>
+    <script defer src="all.js"></script>
+
+</body>
+
+</html>
