@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(240, 240, 240);
+}
+
+img {
+    height: 105vh;
+    position: fixed;
+    right: 0vw;
+    bottom: 0vh;
+    padding: left 0px;
+    margin-left: 0px;
+}
+
+img:hover {
+    height: 106vh;
+}
