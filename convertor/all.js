@@ -2,20 +2,106 @@
 function f1() {
     var type;
     type = document.getElementById("inputtype").value;
-    if (type == "Decimal") {
-        var xyz;
-        xyz = decf1();
-    } else if (type == "Binary") {
-        var xyz;
-        xyz = binf1();
-    } else if (type == "Octal") {
-        var xyz;
-        xyz = octf1();
-    } else if (type == "Hexdecimal") {
-        var xyz;
-        xyz = hexf1();
+
+    switch (type) {
+        case "Decimal":
+            var inp = document.getElementById("hi").value;
+            if (inp == "") {
+                alert("Input cannot be empty");
+                break;
+            }
+            var leng = inp.length;
+            var xval = "0123456789";
+            var ch = 0;
+            for (var i = 0; i < leng; i++) {
+                var cha = inp.charAt(i).toUpperCase();
+                var se = xval.search(cha);
+                if (se == -1) {
+                    ch = -1;
+                    break;
+                }
+            }
+            if (ch !== -1) {
+                decf1();
+            } else {
+                ero();
+            }
+            break;
+        case "Binary":
+            var inp = document.getElementById("hi").value;
+            if (inp == "") {
+                alert("Input cannot be empty");
+                break;
+            }
+            var leng = inp.length;
+            var xval = "01";
+            var ch = 0;
+            for (var i = 0; i < leng; i++) {
+                var cha = inp.charAt(i).toUpperCase();
+                var se = xval.search(cha);
+                if (se == -1) {
+                    ch = -1;
+                    break;
+                }
+            }
+            if (ch !== -1) {
+                binf1();
+            } else {
+                ero();
+            }
+            break;
+        case "Octal":
+            var inp = document.getElementById("hi").value;
+            if (inp == "") {
+                alert("Input cannot be empty");
+                break;
+            }
+            var leng = inp.length;
+            var xval = "01234567";
+            var ch = 0;
+            for (var i = 0; i < leng; i++) {
+                var cha = inp.charAt(i).toUpperCase();
+                var se = xval.search(cha);
+                if (se == -1) {
+                    ch = -1;
+                    break;
+                }
+            }
+            if (ch !== -1) {
+                octf1();
+            } else {
+                ero();
+            }
+            break;
+        case "Hexdecimal":
+            var inp = document.getElementById("hi").value;
+            if (inp == "") {
+                alert("Input cannot be empty");
+                break;
+            }
+            var leng = inp.length;
+            var xval = "0123456789ABCDEF";
+            var ch = 0;
+            for (var i = 0; i < leng; i++) {
+                var cha = inp.charAt(i).toUpperCase();
+                var se = xval.search(cha);
+                if (se == -1) {
+                    ch = -1;
+                    break;
+                }
+            }
+            if (ch !== -1) {
+                hexf1();
+            } else {
+                ero();
+            }
+            break;
+
     }
+
+
 }
+
 
 //declaration and intialization of HTML DOM
 var giv = document.getElementById("given");
@@ -24,6 +110,10 @@ var ret2 = document.getElementById("ret2");
 var ret3 = document.getElementById("ret3");
 
 //function for decimal convertor
+function ero() {
+    alert("Error : 403  Incorrect input format");
+}
+
 function decf1() {
     var inp = document.getElementById("hi").value;
     giv.innerHTML = "Decimal : " + inp;
@@ -59,7 +149,7 @@ function hexf1() {
     ret1.innerHTML = "Decimal : " + dec;
     ret2.innerHTML = "Binary : " + d2b(dec);
     ret3.innerHTML = "Octal : " + d2o(dec);
-    giv.innerHTML = "Hexdecimal : " + inp;
+    giv.innerHTML = "Hexdecimal : " + inp.toUpperCase();
 }
 
 //function for decimal to binary
