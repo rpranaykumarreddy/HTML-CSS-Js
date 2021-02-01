@@ -1,0 +1,30 @@
+* {
+    font-family: Mostra Nuova;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 0vw;
+    background-color: black;
+}
+
+#header {
+    margin: 4vh;
+    color: white;
+}
+
+iframe {
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 15vh;
+    border: white solid 2px;
+    width: 85vw;
+    height: 75vh;
+}
+
+h1 {
+    font-size: 12vh;
+}
+
+img {
+    float: left;
+    height: 12vh;
+}
