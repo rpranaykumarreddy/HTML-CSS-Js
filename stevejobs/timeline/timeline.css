@@ -1,0 +1,40 @@
+* {
+    padding-left: 1vw;
+    margin: 0vw;
+    background-color: black;
+}
+
+h1 {
+    font-family: Mostra Nuova;
+    margin: vw;
+    padding: 25px;
+    font-size: 7.5vh;
+    color: white;
+    border-top: solid 1px white;
+}
+
+.date {
+    font-family: Mostra Nuova;
+    float: left;
+    width: 15vw;
+    text-align: center;
+    margin: 0vw;
+    padding: 8px;
+    color: white;
+    border-top: solid 1px white;
+}
+
+.timeline {
+    font-family: Mostra Nuova;
+    float: left;
+    width: 70vw;
+    text-align: left;
+    margin: 0vw;
+    padding: 8px;
+    color: white;
+    border-top: solid 1px white;
+}
+
+.final {
+    height: 3vh;
+}
