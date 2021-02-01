@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(240, 240, 240);
+}
+
+body {
+    margin: 30px;
+    padding: 1vh;
+}
+
+.line {
+    padding-left: 30px;
+}
+
+.apple1 {
+    padding-left: 35px;
+    font-size: 7.5vh;
+}
+
+.font {
+    font-family: Mostra Nuova;
+}
+
+h2 {
+    padding-left: 8px;
+    font-family: Mostra Nuova;
+}
+
+img {
+    float: right;
+    height: 175px;
+    width: 175px;
+}
+
+img:hover {
+    height: 180px;
+    width: 180px;
+}
+
+p {
+    font-size: 3.5vh;
+}
+
+li {
+    font-size: 3.5vh;
+}
