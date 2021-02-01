@@ -1,0 +1,108 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    background-color: rgba(00, 00, 00, 0.6);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-size: 17px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+    background-color: rgba(00, 00, 00, 0);
+    text-decoration: none;
+    color: blanchedalmond;
+    border: solid 2px rgba(00, 00, 00, 0);
+}
+
+li a:hover {
+    font-size: 17px;
+    border-bottom: solid 2px white;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(00, 00, 00, 0);
+}
+
+iframe {
+    float: left;
+    padding: 0vh;
+    margin-left: 2.5vh;
+    width: 70vw;
+    height: 81vh;
+    border: 1vh outset white;
+    background-color: rgb(240, 240, 240);
+}
+
+aside {
+    float: right;
+    padding: 0.5vh;
+    margin-right: 2.5vh;
+    text-align: center;
+    background-color: rgba(00, 00, 00, 0.5);
+    border: double 1vh white;
+    width: 22vw;
+    height: 80vh;
+}
+
+.aside {
+    color: white;
+    text-align: center;
+    background-color: rgba(00, 00, 00, 0);
+}
+
+img {
+    padding-top: 10px;
+    padding-left: 1vw;
+    float: left;
+    background-color: rgba(00, 00, 00, 0);
+    height: 20px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+    list-style-type: none;
+    margin: 0%;
+    padding-top: 2px;
+    background-color: rgba(00, 00, 00, 0.65);
+    font-family: Mostra Nuova;
+    height: 4vh;
+    width: 100vw;
+}
+
+#pranay {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(00, 00, 00, 0);
+}
+
+#pranay:hover {
+    text-decoration: underline;
+}
