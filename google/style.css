@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100%;
+}
+
+img {
+    padding-top: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+
+ul {
+    background-color: black;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    color: white;
+    background-color: black;
+}
+
+dt a {
+    display: block;
+    color: black;
+    padding: 7px;
+    text-align: center;
+}
+
+dl {
+    background-color: #f1f1f1;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+dt {
+    float: left;
+    color: sandybrown;
+    background-color: #f1f1f1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
