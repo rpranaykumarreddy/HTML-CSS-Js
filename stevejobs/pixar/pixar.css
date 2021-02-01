@@ -1,0 +1,15 @@
+* {
+    padding: 15px;
+    margin: 0vw;
+    background-color: rgb(240, 240, 240);
+}
+
+h1 {
+    padding-left: 40px;
+    font-family: Mostra Nuova;
+    font-size: 7vh;
+}
+
+p {
+    font-size: 3.5vh;
+}
