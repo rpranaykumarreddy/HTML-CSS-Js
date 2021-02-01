@@ -5,98 +5,17 @@ function f1() {
 
     switch (type) {
         case "Decimal":
-            var inp = document.getElementById("hi").value;
-            if (inp == "") {
-                alert("Input cannot be empty");
-                break;
-            }
-            var leng = inp.length;
-            var xval = "0123456789";
-            var ch = 0;
-            for (var i = 0; i < leng; i++) {
-                var cha = inp.charAt(i).toUpperCase();
-                var se = xval.search(cha);
-                if (se == -1) {
-                    ch = -1;
-                    break;
-                }
-            }
-            if (ch !== -1) {
-                decf1();
-            } else {
-                ero();
-            }
+            decf1();
             break;
         case "Binary":
-            var inp = document.getElementById("hi").value;
-            if (inp == "") {
-                alert("Input cannot be empty");
-                break;
-            }
-            var leng = inp.length;
-            var xval = "01";
-            var ch = 0;
-            for (var i = 0; i < leng; i++) {
-                var cha = inp.charAt(i).toUpperCase();
-                var se = xval.search(cha);
-                if (se == -1) {
-                    ch = -1;
-                    break;
-                }
-            }
-            if (ch !== -1) {
-                binf1();
-            } else {
-                ero();
-            }
+            binf1();
             break;
         case "Octal":
-            var inp = document.getElementById("hi").value;
-            if (inp == "") {
-                alert("Input cannot be empty");
-                break;
-            }
-            var leng = inp.length;
-            var xval = "01234567";
-            var ch = 0;
-            for (var i = 0; i < leng; i++) {
-                var cha = inp.charAt(i).toUpperCase();
-                var se = xval.search(cha);
-                if (se == -1) {
-                    ch = -1;
-                    break;
-                }
-            }
-            if (ch !== -1) {
-                octf1();
-            } else {
-                ero();
-            }
+            octf1();
             break;
         case "Hexdecimal":
-            var inp = document.getElementById("hi").value;
-            if (inp == "") {
-                alert("Input cannot be empty");
-                break;
-            }
-            var leng = inp.length;
-            var xval = "0123456789ABCDEF";
-            var ch = 0;
-            for (var i = 0; i < leng; i++) {
-                var cha = inp.charAt(i).toUpperCase();
-                var se = xval.search(cha);
-                if (se == -1) {
-                    ch = -1;
-                    break;
-                }
-            }
-            if (ch !== -1) {
-                hexf1();
-            } else {
-                ero();
-            }
+            hexf1();
             break;
-
     }
 
 
@@ -116,40 +35,118 @@ function ero() {
 
 function decf1() {
     var inp = document.getElementById("hi").value;
-    giv.innerHTML = "Decimal : " + inp;
-    ret1.innerHTML = "Binary : " + d2b(inp);
-    ret2.innerHTML = "Octal : " + d2o(inp);
-    ret3.innerHTML = "Hexdecimal : " + d2h(inp);
+    if (inp == "") {
+        alert("Input cannot be empty");
+    }
+    var leng = inp.length;
+    var xval = "0123456789";
+    var check = 0;
+    for (var i = 0; i < leng; i++) {
+        var cha = inp.charAt(i).toUpperCase();
+        var se = xval.search(cha);
+        if (se == -1) {
+            check = -1;
+            break;
+        }
+    }
+    if (check !== -1) {
+        giv.innerHTML = "Decimal : " + inp;
+        ret1.innerHTML = "Binary : " + d2b(inp);
+        ret2.innerHTML = "Octal : " + d2o(inp);
+        ret3.innerHTML = "Hexdecimal : " + d2h(inp);
+    } else {
+        ero();
+    }
+
 }
 
 //function for binary convertor
 function binf1() {
     var inp = document.getElementById("hi").value;
-    var dec = b2d(inp);
-    ret1.innerHTML = "Decimal : " + dec;
-    giv.innerHTML = "Binary : " + inp;
-    ret2.innerHTML = "Octal : " + d2o(dec);
-    ret3.innerHTML = "Hexdecimal : " + d2h(dec);
+    if (inp == "") {
+        alert("Input cannot be empty");
+    }
+    var leng = inp.length;
+    var xval = "01";
+    var check = 0;
+    for (var i = 0; i < leng; i++) {
+        var cha = inp.charAt(i).toUpperCase();
+        var se = xval.search(cha);
+        if (se == -1) {
+            check = -1;
+            break;
+        }
+    }
+    if (check !== -1) {
+        var dec = b2d(inp);
+        ret1.innerHTML = "Decimal : " + dec;
+        giv.innerHTML = "Binary : " + inp;
+        ret2.innerHTML = "Octal : " + d2o(dec);
+        ret3.innerHTML = "Hexdecimal : " + d2h(dec);
+    } else {
+        ero();
+    }
+
+
 }
 
 //function for octal convertor
 function octf1() {
+
     var inp = document.getElementById("hi").value;
-    var dec = o2d(inp);
-    ret1.innerHTML = "Decimal : " + dec;
-    ret2.innerHTML = "Binary : " + d2b(dec);
-    giv.innerHTML = "Octal : " + inp;
-    ret3.innerHTML = "Hexdecimal : " + d2h(dec);
+    if (inp == "") {
+        alert("Input cannot be empty");
+    }
+    var leng = inp.length;
+    var xval = "01234567";
+    var check = 0;
+    for (var i = 0; i < leng; i++) {
+        var cha = inp.charAt(i).toUpperCase();
+        var se = xval.search(cha);
+        if (se == -1) {
+            check = -1;
+            break;
+        }
+    }
+    if (check !== -1) {
+        var dec = o2d(inp);
+        ret1.innerHTML = "Decimal : " + dec;
+        ret2.innerHTML = "Binary : " + d2b(dec);
+        giv.innerHTML = "Octal : " + inp;
+        ret3.innerHTML = "Hexdecimal : " + d2h(dec);
+    } else {
+        ero();
+    }
+
 }
 
 //function for hexdecimal convertor
 function hexf1() {
     var inp = document.getElementById("hi").value;
-    var dec = h2d(inp);
-    ret1.innerHTML = "Decimal : " + dec;
-    ret2.innerHTML = "Binary : " + d2b(dec);
-    ret3.innerHTML = "Octal : " + d2o(dec);
-    giv.innerHTML = "Hexdecimal : " + inp.toUpperCase();
+    if (inp == "") {
+        alert("Input cannot be empty");
+    }
+    var leng = inp.length;
+    var xval = "0123456789ABCDEF";
+    var check = 0;
+    for (var i = 0; i < leng; i++) {
+        var cha = inp.charAt(i).toUpperCase();
+        var se = xval.search(cha);
+        if (se == -1) {
+            check = -1;
+            break;
+        }
+    }
+    if (check !== -1) {
+        var dec = h2d(inp);
+        ret1.innerHTML = "Decimal : " + dec;
+        ret2.innerHTML = "Binary : " + d2b(dec);
+        ret3.innerHTML = "Octal : " + d2o(dec);
+        giv.innerHTML = "Hexdecimal : " + inp.toUpperCase();
+    } else {
+        ero();
+    }
+
 }
 
 //function for decimal to binary
