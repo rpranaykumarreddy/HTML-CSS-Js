@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhosh Automobiles</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nav">
+        <p>Santhosh Automobiles</p>
+    </div>
+    <main class="div-margin-bot">
+        <br><br><br>
+        <br><br><br>
+        <div class="flex-row">
+            <h1 class="dis-inli tebold content-h2">Price list of oil</h1>
+        </div>
+        <div class="div-comp">
+            <div class="flex-row">
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeRpjbeZw-gpH5lt5XBF3L5biuBorhTYW1o6UvUZd1nXOo9Dw/viewform?usp=sf_link">
+                    <div class="button">
+                        <div class="layer"></div>
+                        <input class="tebold" type="submit" value="New Item">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <main class="div-margin-bot">
+        <div class="bcli-white-2">
+            <div>
+                <h1 class="bcorange-2 cwhite1 tehv-pad content-h2">Price List</h1>
+            </div>
+
+            <div class="DivRate">
+                <iframe onload="resizeIframe(this)" referrerpolicy="no-referrer-when-downgrade" width="100%" style="border:none;" src="https://view-awesome-table.com/-N4keVgkLPKHBL04sKCT/view"></iframe></div>
+        </div>
+    </main>
+    <footer class="bcorange-2 cwhite1">
+        <div>
+            <h1 class="tehv-pad tecenter content-p">Made with &#9829; by <a href="https://wethinc.in">WeThinc.in</a>
+            </h1>
+        </div>
+    </footer>
+    <script>
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (10 < currentScrollPos) {
+                document.getElementById("nav").style.backgroundColor = "#000000";
+                document.getElementById("nav").style.color = "#fff";
+            } else {
+                document.getElementById("nav").style.backgroundColor = "transparent";
+                document.getElementById("nav").style.color = "#000";
+            }
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        var interval = setInterval(function() {
+            plusSlides(1);
+        }, 6500);
+
+        function clickSlides(n) {
+            showSlides(slideIndex += n);
+            clearInterval(interval);
+            interval = setInterval(function() {
+                plusSlides(1);
+            }, 6500);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
